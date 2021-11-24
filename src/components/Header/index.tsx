@@ -1,13 +1,15 @@
-import {HeaderContainer} from './styles';
-import logoImgHeader from '../../assets/Logo.svg';
-import { SearchBarContainer } from '../SearchBar/styles';
+import { HeaderContainer } from "./styles";
+import logoImgHeader from "../../assets/Logo.svg";
+import { SearchBar } from "../SearchBar";
 
 export const Header = () => {
-    return <>
-        <HeaderContainer>
-            <img src={logoImgHeader} alt="Logo" />
-            <SearchBarContainer />
-            <div>foto</div>
-        </HeaderContainer>
+  return (
+    <>
+      <HeaderContainer>
+        <img src={logoImgHeader} alt="Logo" />
+        <SearchBar />
+        <div>foto</div>
+      </HeaderContainer>
     </>
-}
+  );
+};
