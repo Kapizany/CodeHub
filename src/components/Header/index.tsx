@@ -1,17 +1,13 @@
-import styled from 'styled-components';
+import {HeaderContainer} from './styles';
 import logoImgHeader from '../../assets/Logo.svg';
-
-const Headercontainer = styled.div`
-    position: fixed;
-    top: 15px;
-    left: 5%;
-    width: 90%;
-`;
+import { SearchBarContainer } from '../SearchBar/styles';
 
 export const Header = () => {
     return <>
-        <Headercontainer>
+        <HeaderContainer>
             <img src={logoImgHeader} alt="Logo" />
-        </Headercontainer>
+            <SearchBarContainer />
+            <div>foto</div>
+        </HeaderContainer>
     </>
 }
