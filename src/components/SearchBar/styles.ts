@@ -4,10 +4,15 @@ export const SearchBarContainer = styled.input`
     width: 50%;
     height: 2.2rem;
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.16);
+    background: var(--input-background);
     border-style: hidden;
     padding-left: 0.625rem;
+    margin-left: -2%;
+    color: var(--text-input);
     ::placeholder {
-    color: #FFFFFF;
+    color: var(--text-input);
+    }
+    :focus{
+        outline: none;
     }
 `;
