@@ -1,6 +1,7 @@
 import { HeaderContainer } from "./styles";
 import logoImgHeader from "../../assets/Logo.svg";
 import { SearchBar } from "../SearchBar";
+import { ProfilePicture } from "../ProfilePicture";
 
 export const Header = () => {
   return (
@@ -8,7 +9,8 @@ export const Header = () => {
       <HeaderContainer>
         <img src={logoImgHeader} alt="Logo" />
         <SearchBar />
-        <div>foto</div>
+        {/* <div>foto</div> */}
+        <ProfilePicture />
       </HeaderContainer>
     </>
   );
