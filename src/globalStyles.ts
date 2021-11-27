@@ -4,10 +4,10 @@ export const GlobalStyle = createGlobalStyle`
     :root{
         --background: #051D3B;
         --red: #e52e4d;
-        --blue: #5429cc;
+        --blue: rgba(80, 129, 251, 0.16);
         --green: #33cc95;
 
-        --blue-light: #6933ff;
+        --blue-light: #5081FB;
         --input-background: rgba(255, 255, 255, 0.16);
 
         --text-title: #ffffff;
