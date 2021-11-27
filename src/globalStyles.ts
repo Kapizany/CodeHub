@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root{
@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         --blue-light: #5081FB;
         --input-background: rgba(255, 255, 255, 0.16);
 
-        --text-title: #363f5f;
+        --text-title: #ffffff;
         --text-body: #969cb3;
 
         --text-input: #ffffff;
