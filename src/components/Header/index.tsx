@@ -9,7 +9,6 @@ export const Header = () => {
       <HeaderContainer>
         <img src={logoImgHeader} alt="Logo" />
         <SearchBar />
-        {/* <div>foto</div> */}
         <ProfilePicture />
       </HeaderContainer>
     </>
