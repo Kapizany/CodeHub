@@ -1,7 +1,9 @@
+import { GlobalStyle } from "./globalStyles";
 import { Header } from "./components/Header";
 import { SidebarMenu } from "./components/SidebarMenu";
-import { GlobalStyle } from "./globalStyles";
-import { ProjectConfigMenu } from "./components/ProjectConfigMenu";
+import { EditorBody } from "./components/EditorBody";
+// import { CodeEditor } from "./components/CodeEditor";
+// import { ProjectConfigMenu } from "./components/ProjectConfigMenu";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <SidebarMenu />
-      <ProjectConfigMenu />
+      <EditorBody />
     </>
   );
 }

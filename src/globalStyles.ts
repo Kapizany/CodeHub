@@ -14,6 +14,8 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
 
         --text-input: #ffffff;
+
+        --text-editor-background: #141414;
     }
 
     body {

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ProjectConfigMenuContainer = styled.div`
-  position: absolute;
-  top: 3.35rem; /* the header has 3.31rem */
-  right: 3%;
+  /* position: absolute; */
+  /* top: 3.35rem;  the header has 3.31rem */
+  /* right: 3%; */
 
   h2 {
     /* Seu projeto */
