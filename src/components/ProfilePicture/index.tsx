@@ -1,4 +1,8 @@
-import { AvatarAndNameHeaderContainer, AvatarHeader, NameHeader } from "./styles";
+import {
+  AvatarAndNameHeaderContainer,
+  AvatarHeader,
+  NameHeader,
+} from "./styles";
 
 export const ProfilePicture = () => {
   return (

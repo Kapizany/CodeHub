@@ -10,11 +10,11 @@ export const CodeEditorContainer = styled.div`
 
   border-radius: 0.5rem;
   border-style: hidden;
-  border-width: 0px;
+  border-width: 0rem;
 `;
 
 export const CodeEditorFieldContainer = styled.textarea`
-  width: 32.65rem;
+  width: 34.2rem; /* only works when maximized */
   height: 16.88rem;
 
   padding: 1rem;
@@ -24,7 +24,7 @@ export const CodeEditorFieldContainer = styled.textarea`
 
   border-radius: 0.5rem;
   border-style: hidden;
-  border-width: 0px;
+  border-width: 0rem;
 
   /* $editor-shadow */
   /* box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24); */

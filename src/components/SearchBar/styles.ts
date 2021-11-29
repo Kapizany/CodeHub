@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const SearchBarContainer = styled.input`
   width: 50%;
-  height: 3.38rem; /* 2.2rem previously */
+  height: 3.5rem; /* 2.2rem previously */
   margin-left: -2%;
-  padding-left: 0.625rem;
+  padding: 0 14px;
 
   border-radius: 0.5rem;
   border-style: hidden;

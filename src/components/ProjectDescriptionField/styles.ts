@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const ProjectDescriptionFieldContainer = styled.textarea`
   display: inline-block;
   width: 13rem;
-  height: 4.25rem;
-  padding-top: 0.625rem;
-  padding-left: 0.625rem;
+  height: 3rem;
+  margin: 0rem;
+  padding: 1rem 14px;
 
   border-radius: 0.5rem;
   border-style: hidden;
+  border-width: 0rem;
 
   background: var(--input-background);
 

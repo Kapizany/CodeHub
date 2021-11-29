@@ -6,7 +6,7 @@ export const ProjectConfigMenuContainer = styled.div`
 
   h2 {
     display: inherit;
-    margin-top: 0rem;
+    margin: 0rem;
 
     color: var(--text-title);
 
