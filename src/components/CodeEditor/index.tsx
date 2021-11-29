@@ -1,10 +1,10 @@
 import { CodeEditorContainer } from "./styles";
-import { CodeEditorField } from "../CodeEditorField";
+import { CodeEditorFieldContainer } from "./styles";
 
 export const CodeEditor = () => {
   return (
-      <CodeEditorContainer>
-        <CodeEditorField />
-      </CodeEditorContainer>
+    <CodeEditorContainer>
+      <CodeEditorFieldContainer placeholder="Entre seu código aqui" />
+    </CodeEditorContainer>
   );
 };

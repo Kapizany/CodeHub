@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarMenuContainer = styled.div`
   position: absolute;
-  top: 3.35rem;
+  top: 5.52rem; /* 3.35rem previously */
   bottom: 0.5rem;
   left: 3%;
   width: 22%;

@@ -1,18 +1,47 @@
 import styled from "styled-components";
 
 export const CodeEditorContainer = styled.div`
-  /* Auto Layout */
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
-  padding: 50px;
+  width: auto;
+  height: auto;
 
-  /* position: absolute; */
-  width: 752px;
-  height: 366px;
-  left: 344px;
-  top: 128px;
+  padding: 2rem;
 
-  background: #6bd1ff;
-  border-radius: 8px;
+  background: #6bd1ff; /* link to personalização color */
+
+  border-radius: 0.5rem;
+  border-style: hidden;
+  border-width: 0px;
+`;
+
+export const CodeEditorFieldContainer = styled.textarea`
+  width: 32.65rem;
+  height: 16.88rem;
+
+  padding: 1rem;
+  margin: 0px;
+
+  background: var(--text-editor-background); /* Neutral/$dark-gray */
+
+  border-radius: 0.5rem;
+  border-style: hidden;
+  border-width: 0px;
+
+  /* $editor-shadow */
+  /* box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24); */
+
+  ::placeholder {
+    color: var(--text-input);
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  /* Font */
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-input);
 `;

@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 export const ProjectConfigMenuContainer = styled.div`
-  /* position: absolute; */
-  /* top: 3.35rem;  the header has 3.31rem */
-  /* right: 3%; */
+  display: flex;
+  flex-direction: column;
 
   h2 {
-    /* Seu projeto */
+    display: inherit;
+    margin-top: 0rem;
+
+    color: var(--text-title);
 
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 18px;
-
     letter-spacing: 0.4em;
     text-transform: uppercase;
-
-    color: var(--text-title);
   }
 `;
