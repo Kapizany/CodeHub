@@ -9,7 +9,7 @@ export const EditorBodyOuterDiv = styled.div`
 
 export const EditorBodyContainer = styled.div`
   margin-top: 2.5rem;
-  margin-left: 1.53rem;
+  margin-left: 1.7rem; /* 1.53rem; previously */
   display: flex;
   justify-content: space-between;
 `;

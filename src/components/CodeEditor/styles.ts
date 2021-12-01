@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const CodeEditorOuterDivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  border-width: 0;
+  padding: 0;
+`;
+
 export const CodeEditorContainer = styled.div`
   width: auto;
   height: auto;
@@ -14,7 +23,7 @@ export const CodeEditorContainer = styled.div`
 `;
 
 export const CodeEditorFieldContainer = styled.textarea`
-  width: 34.2rem; /* only works when maximized */
+  width: 34.97rem; /* 34.2rem; only works when maximized */
   height: 16.88rem;
 
   padding: 1rem;
