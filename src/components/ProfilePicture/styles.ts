@@ -13,4 +13,11 @@ export const AvatarAndNameHeaderContainer = styled.div`
 
 export const NameHeader = styled.span`
   margin-left: 0.5rem;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-title);
 `;
