@@ -8,15 +8,20 @@ interface ProjectConfigMenuProps {
   setSelectedColor: (color: string) => void;
 }
 
-export const ProjectConfigMenu:React.FC<ProjectConfigMenuProps> = ({selectedColor, setSelectedColor}) => {
-
+export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
+  selectedColor,
+  setSelectedColor,
+}) => {
   return (
     <ProjectConfigMenuContainer>
-        <h2>Seu projeto</h2>
-        <ProjectTitleField />
-        <ProjectDescriptionField />
-        <h2>Personalização</h2>
-        <PreferencesMenu selectedColor={selectedColor} setSelectedColor={setSelectedColor} />
+      <h2>Seu projeto</h2>
+      <ProjectTitleField />
+      <ProjectDescriptionField />
+      <h2>Personalização</h2>
+      <PreferencesMenu
+        selectedColor={selectedColor}
+        setSelectedColor={setSelectedColor}
+      />
     </ProjectConfigMenuContainer>
   );
 };
