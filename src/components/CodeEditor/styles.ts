@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CodeEditorProps } from ".";
 
 export const CodeEditorOuterDivContainer = styled.div`
   display: flex;
@@ -9,13 +10,13 @@ export const CodeEditorOuterDivContainer = styled.div`
   padding: 0;
 `;
 
-export const CodeEditorContainer = styled.div`
+export const CodeEditorContainer = styled.div<CodeEditorProps>`
   width: auto;
   height: auto;
 
   padding: 2rem;
 
-  background: #6bd1ff; /* link to personalização color */
+  background: ${props => props.selectedColor}; /* link to personalização color */
 
   border-radius: 0.5rem;
   border-style: hidden;
