@@ -2,11 +2,16 @@ import { CodeEditorOuterDivContainer } from "./styles";
 import { CodeEditorContainer } from "./styles";
 import { CodeEditorFieldContainer } from "./styles";
 import { HighlightButton } from "../HighlightButton";
+import React from "react";
 
-export const CodeEditor = () => {
+export interface CodeEditorProps {
+  selectedColor: string;
+}
+
+export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor}) => {
   return (
     <CodeEditorOuterDivContainer>
-      <CodeEditorContainer>
+      <CodeEditorContainer selectedColor={selectedColor} >
         <CodeEditorFieldContainer placeholder="Entre seu código aqui." />
       </CodeEditorContainer>
       <HighlightButton />

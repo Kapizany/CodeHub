@@ -4,7 +4,7 @@ export const ProjectDescriptionFieldContainer = styled.textarea`
   display: inline-block;
   width: 13rem;
   height: 3rem;
-  margin: 0rem;
+  margin: 0 0 2rem;
   padding: 1rem 14px;
 
   border-radius: 0.5rem;
@@ -27,4 +27,5 @@ export const ProjectDescriptionFieldContainer = styled.textarea`
   font-size: 16px;
   line-height: 24px;
   color: var(--text-input);
+  opacity: 0.64;
 `;

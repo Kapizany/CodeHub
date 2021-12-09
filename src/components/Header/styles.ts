@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   left: 2.5%; /* 3% previously */
   width: 95%; /* 94% previously */
   height: 3.5rem; /* 2.4rem previously, 0.2rem more than the SearchBar (2.2) */
-  padding-top: 2rem; /* 0.91rem previously */
+  padding-top: 1rem; /* 0.91rem previously */
   display: flex;
   align-items: center;
   justify-content: space-between;

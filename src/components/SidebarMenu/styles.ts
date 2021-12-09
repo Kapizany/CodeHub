@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SidebarMenuContainer = styled.div`
-  position: absolute;
-  top: 5.5rem; /* 3.35rem previously */
+  position: fixed;
+  top: 4.5rem; /* 3.35rem previously */
   bottom: 0.5rem;
   left: 2.5%; /* 3% previously */
   width: 22%;
@@ -16,7 +16,7 @@ export const SideBarMenuDiv = styled.div`
   line-height: 18px;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
-  margin-top: 2.5rem;
+  margin-top: 2rem; /* 2.5rem previously */
   color: #ffffff;
 `;
 export const SideBarMenuListContainer = styled.div`
