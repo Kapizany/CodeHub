@@ -1,12 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes as Switch, Route, Navigate } from "react-router-dom";
 import { CodeEditorApp } from "./components/CodeEditorApp";
 
-export const Rotas = () => {
+export const Routes = () => {
   return (
     <BrowserRouter>
-      <Routes>
+      <Switch>
+        <Route path="/" element={<Navigate to="/code-editor-app" />} />
         <Route path="/code-editor-app" element={<CodeEditorApp />} />
-      </Routes>
+      </Switch>
     </BrowserRouter>
   );
 };
