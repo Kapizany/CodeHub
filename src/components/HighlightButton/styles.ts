@@ -11,10 +11,6 @@ export const HighlightButtonContainer = styled.button`
 
   background: var(--blue);
 
-  :active {
-    background: var(--text-editor-background);
-  }
-
   /* :focus {
     outline: none;
   } */

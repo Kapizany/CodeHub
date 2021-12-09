@@ -27,4 +27,5 @@ export const ProjectTitleFieldContainer = styled.input`
   font-size: 16px;
   line-height: 24px;
   color: var(--text-input);
+  opacity: 0.64;
 `;
