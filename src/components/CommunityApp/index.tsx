@@ -5,7 +5,7 @@ export const CommunityApp = () => {
   return (
     <>
       <Header />
-      <SidebarMenu />
+      <SidebarMenu selectedPage="community" />
     </>
   );
 };
