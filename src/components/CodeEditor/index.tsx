@@ -2,7 +2,7 @@ import { CodeEditorOuterDivContainer } from "./styles";
 import { CodeEditorContainer } from "./styles";
 import { CodeEditorFieldContainer } from "./styles";
 import { HighlightButton } from "../HighlightButton";
-import React from "react";
+// import React from "react";
 
 export interface CodeEditorProps {
   selectedColor: string;
