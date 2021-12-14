@@ -21,6 +21,20 @@ export const CodeEditorContainer = styled.div<CodeEditorProps>`
   border-radius: 0.5rem;
   border-style: hidden;
   border-width: 0rem;
+
+  pre{
+      width: 34.97rem; /* 34.2rem; only works when maximized */
+      height: 16.88rem;
+
+      padding: 1rem !important;
+      margin: 0px !important;
+
+      background: var(--text-editor-background) !important; /* Neutral/$dark-gray */
+
+      border-radius: 0.5rem;
+      border-style: hidden;
+      border-width: 0rem;
+  }
 `;
 
 export const CodeEditorFieldContainer = styled.textarea`
@@ -55,3 +69,7 @@ export const CodeEditorFieldContainer = styled.textarea`
   line-height: 18px;
   color: var(--text-input);
 `;
+function SyntaxHighlighter(SyntaxHighlighter: any) {
+  throw new Error("Function not implemented.");
+}
+
