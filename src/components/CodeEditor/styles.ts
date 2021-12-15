@@ -69,7 +69,4 @@ export const CodeEditorFieldContainer = styled.textarea`
   line-height: 18px;
   color: var(--text-input);
 `;
-function SyntaxHighlighter(SyntaxHighlighter: any) {
-  throw new Error("Function not implemented.");
-}
 

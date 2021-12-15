@@ -3,6 +3,7 @@ import { CodeEditorContainer } from "./styles";
 import { CodeEditorFieldContainer } from "./styles";
 import { HighlightButton } from "../HighlightButton";
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import gradientDark  from 'react-syntax-highlighter/dist/cjs/styles/hljs/gradient-dark';
 import { useState } from "react";
 // import React from "react";
 
@@ -18,7 +19,7 @@ export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor}) => {
       <CodeEditorContainer selectedColor={selectedColor} >
         {
           highlightOn ? (
-            <SyntaxHighlighter language="javascript" >
+            <SyntaxHighlighter style={gradientDark} language="javascript" >
               {codeEditorContent}
             </SyntaxHighlighter>
           ) : (
