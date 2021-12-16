@@ -6,7 +6,7 @@ export const CodeEditorApp = () => {
   return (
     <>
       <Header />
-      <SidebarMenu />
+      <SidebarMenu selectedPage="editor" />
       <EditorBody />
     </>
   );

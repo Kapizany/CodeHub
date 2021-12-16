@@ -5,7 +5,7 @@ export const SidebarMenuContainer = styled.div`
   top: 4.5rem; /* 3.35rem previously */
   bottom: 0.5rem;
   left: 2.5%; /* 3% previously */
-  width: 22%;
+  width: 20%;
 `;
 
 export const SideBarMenuDiv = styled.div`
@@ -30,18 +30,22 @@ export const SideBarMenuListContainer = styled.div`
 interface SidebarMenuItemIconBackgroundProps {
   isSelected?: boolean;
 }
-export const SidebarMenuItemIconBackground = styled.div<SidebarMenuItemIconBackgroundProps>`
+export const SidebarMenuItemIconBackground = styled.button<SidebarMenuItemIconBackgroundProps>`
   width: 3rem;
   height: 3rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  justify-content: space-around; 
   background: ${(props) =>
     props.isSelected ? "var(--blue-light)" : "var(--blue)"};
 `;
 
-export const SidebarMenuItemIconText = styled.span`
+export const SidebarMenuItemIconText = styled.a`
+  text-decoration:none;
+  cursor: pointer;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
