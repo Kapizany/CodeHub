@@ -15,14 +15,14 @@ interface PreferencesMenuProps {
   selectedColor: string;
   setSelectedColor: (color: string) => void;
   selectedLanguage: string;
-  selectLanguage: (language: string) => void;
+  setSelectedLanguage: (language: string) => void;
 }
 
 export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
   selectedColor,
   setSelectedColor,
   selectedLanguage,
-  selectLanguage,
+  setSelectedLanguage,
 }) => {
   const [hiddenColorPick, setHiddenColorPick] = useState(false);
   const colorsList = ['#B80000', '#DB3E00', '#FCCB00', '#008B02',
@@ -31,7 +31,7 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
                       '#7991a7', '#6BD1FF', '#000000', '#ffffff']
   return (
     <>
-      <PreferencesMenuLanguage onChange={(event) => console.log(event)}>
+      <PreferencesMenuLanguage defaultValue={selectedLanguage} onChange={(event) => setSelectedLanguage(event.target.value)}>
         <option value="javascript">Javascript</option>
         <option value="python">Python</option>
         <option value="html">CSS</option>

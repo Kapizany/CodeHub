@@ -1,4 +1,4 @@
-import { ReactChild, ReactNode } from "react";
+import { ReactNode } from "react";
 import { PostListContainer } from "./styles";
 
 export const PostList: React.FC<ReactNode> = ({children}) => {

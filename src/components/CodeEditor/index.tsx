@@ -10,7 +10,7 @@ import { useState } from "react";
 export interface CodeEditorOuterDivContainerProps {
   selectedColor: string;
   selectedLanguage: string;
-  selectLanguage: (language: string) => void;
+  setSelectedLanguage: (language: string) => void;
 }
 
 export interface CodeEditorProps {
@@ -23,10 +23,10 @@ export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLan
   const [highlightOn, setHighlightOn] = useState(false);
   return (
     <CodeEditorOuterDivContainer>
-      <CodeEditorContainer selectedColor={selectedColor} selectedLanguage={selectedLanguage}>
+      <CodeEditorContainer selectedColor={selectedColor}>
         {
           highlightOn ? (
-            <SyntaxHighlighter style={gradientDark} language="javascript" >
+            <SyntaxHighlighter style={gradientDark} language={selectedLanguage} >
               {codeEditorContent}
             </SyntaxHighlighter>
           ) : (
@@ -38,7 +38,7 @@ export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLan
           )
         }
       </CodeEditorContainer>
-      <HighlightButton highlightOn={highlightOn} onClick={ () => setHighlightOn(!highlightOn)} />
+      <HighlightButton highlightOn={highlightOn} onClick={() => setHighlightOn(!highlightOn)} />
     </CodeEditorOuterDivContainer>
   );
 };

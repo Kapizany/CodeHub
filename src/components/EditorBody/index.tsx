@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const EditorBody = () => {
   const [selectedColor, setSelectedColor] = useState("#6BD1FF");
-  const [selectedLanguage, selectLanguage] = useState("javascript");
+  const [selectedLanguage, setSelectedLanguage] = useState("javascript");
   return (
     <EditorBodyOuterDiv>
       <EditorBodyContainer>
@@ -15,7 +15,7 @@ export const EditorBody = () => {
           selectedColor={selectedColor}
           setSelectedColor={setSelectedColor}
           selectedLanguage={selectedLanguage}
-          selectLanguage={selectLanguage}
+          setSelectedLanguage={setSelectedLanguage}
         />
       </EditorBodyContainer>
     </EditorBodyOuterDiv>

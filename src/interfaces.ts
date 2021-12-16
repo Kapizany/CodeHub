@@ -1,4 +1,4 @@
 export interface languagesProps {
   selectedLanguage: string;
-  selectLanguage: (language: string) => void;
+  setSelectedLanguage: (language: string) => void;
 }

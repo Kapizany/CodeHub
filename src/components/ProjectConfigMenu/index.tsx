@@ -7,14 +7,14 @@ interface ProjectConfigMenuProps {
   selectedColor: string;
   setSelectedColor: (color: string) => void;
   selectedLanguage: string;
-  selectLanguage: (language: string) => void;
+  setSelectedLanguage: (language: string) => void;
 }
 
 export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
   selectedColor,
   setSelectedColor,
   selectedLanguage,
-  selectLanguage,
+  setSelectedLanguage,
 }) => {
   return (
     <ProjectConfigMenuContainer>
@@ -26,7 +26,7 @@ export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
         selectedColor={selectedColor}
         setSelectedColor={setSelectedColor}
         selectedLanguage={selectedLanguage}
-        selectLanguage={selectLanguage}
+        setSelectedLanguage={setSelectedLanguage}
       />
     </ProjectConfigMenuContainer>
   );

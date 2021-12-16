@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { CodeEditorProps } from ".";
-import { CodeEditorOuterDivContainerProps } from ".";
+import { PreferencesMenuColorPickProps } from "../PreferencesMenu";
 
-export const CodeEditorOuterDivContainer = styled.div<CodeEditorOuterDivContainerProps>`
+export const CodeEditorOuterDivContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: auto;
@@ -11,7 +10,7 @@ export const CodeEditorOuterDivContainer = styled.div<CodeEditorOuterDivContaine
   padding: 0;
 `;
 
-export const CodeEditorContainer = styled.div<CodeEditorProps>`
+export const CodeEditorContainer = styled.div<PreferencesMenuColorPickProps>`
   width: auto;
   height: auto;
 

@@ -1,10 +1,10 @@
-import { CodeEditorProps } from "../CodeEditor";
 import { BottomSectionContainer, CommentsAndLikesContainer, PostItemContainer, PostListCodeEditorContainer, PostListCodeEditorFieldContainer } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { ProfilePicture } from "../ProfilePicture";
+import { PreferencesMenuColorPickProps } from "../PreferencesMenu";
 
-export const PostItem: React.FC<CodeEditorProps> = ({ selectedColor }) => {
+export const PostItem: React.FC<PreferencesMenuColorPickProps> = ({ selectedColor }) => {
   return (
     <PostItemContainer>
       <PostListCodeEditorContainer selectedColor={selectedColor}>
