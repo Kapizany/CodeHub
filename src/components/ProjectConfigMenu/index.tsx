@@ -6,11 +6,15 @@ import { PreferencesMenu } from "../PreferencesMenu";
 interface ProjectConfigMenuProps {
   selectedColor: string;
   setSelectedColor: (color: string) => void;
+  selectedLanguage: string;
+  selectLanguage: (language: string) => void;
 }
 
 export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
   selectedColor,
   setSelectedColor,
+  selectedLanguage,
+  selectLanguage,
 }) => {
   return (
     <ProjectConfigMenuContainer>
@@ -21,6 +25,8 @@ export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
       <PreferencesMenu
         selectedColor={selectedColor}
         setSelectedColor={setSelectedColor}
+        selectedLanguage={selectedLanguage}
+        selectLanguage={selectLanguage}
       />
     </ProjectConfigMenuContainer>
   );

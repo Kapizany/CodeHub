@@ -7,26 +7,33 @@ import gradientDark  from 'react-syntax-highlighter/dist/cjs/styles/hljs/gradien
 import { useState } from "react";
 // import React from "react";
 
-export interface CodeEditorProps {
+export interface CodeEditorOuterDivContainerProps {
   selectedColor: string;
+  selectedLanguage: string;
+  selectLanguage: (language: string) => void;
 }
 
-export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor}) => {
+export interface CodeEditorProps {
+  selectedColor: string;
+  selectedLanguage: string;
+}
+
+export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLanguage}) => {
   const [codeEditorContent, setCodeEditorContent] = useState('');
   const [highlightOn, setHighlightOn] = useState(false);
   return (
     <CodeEditorOuterDivContainer>
-      <CodeEditorContainer selectedColor={selectedColor} >
+      <CodeEditorContainer selectedColor={selectedColor} selectedLanguage={selectedLanguage}>
         {
           highlightOn ? (
             <SyntaxHighlighter style={gradientDark} language="javascript" >
               {codeEditorContent}
             </SyntaxHighlighter>
           ) : (
-            <CodeEditorFieldContainer 
-              onChange={(event) => setCodeEditorContent(event.target.value)} 
+            <CodeEditorFieldContainer
+              onChange={(event) => setCodeEditorContent(event.target.value)}
               value={codeEditorContent}
-              placeholder="Entre seu código aqui." 
+              placeholder="Entre seu código aqui."
             />
           )
         }

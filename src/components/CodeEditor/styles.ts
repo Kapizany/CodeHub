@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { CodeEditorProps } from ".";
+import { CodeEditorOuterDivContainerProps } from ".";
 
-export const CodeEditorOuterDivContainer = styled.div`
+export const CodeEditorOuterDivContainer = styled.div<CodeEditorOuterDivContainerProps>`
   display: flex;
   flex-direction: column;
   width: auto;
@@ -69,4 +70,3 @@ export const CodeEditorFieldContainer = styled.textarea`
   line-height: 18px;
   color: var(--text-input);
 `;
-
