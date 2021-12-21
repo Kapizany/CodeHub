@@ -1,7 +1,18 @@
 import { ProjectDescriptionFieldContainer } from "./styles";
 
-export const ProjectDescriptionField = () => {
+interface ProjectDescriptionFieldProps {
+  projectDescription: string;
+  setProjectDescription: (description:string) => void;
+}
+
+export const ProjectDescriptionField: React.FC<ProjectDescriptionFieldProps> = ({
+  projectDescription,
+  setProjectDescription,
+}) => {
   return (
-    <ProjectDescriptionFieldContainer placeholder="Descrição do seu projeto" />
+    <ProjectDescriptionFieldContainer
+      value={projectDescription}
+      onChange={(event) => setProjectDescription(event.target.value)}
+      placeholder="Descrição do seu projeto" />
   );
 };

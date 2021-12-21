@@ -78,4 +78,5 @@ export const PreferencesMenuSaveProject = styled.button`
   line-height: 24px;
   text-align: center;
   color: var(--background);
+  cursor: pointer;
 `;
