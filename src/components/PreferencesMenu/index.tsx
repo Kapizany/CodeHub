@@ -16,6 +16,9 @@ interface PreferencesMenuProps {
   setSelectedColor: (color: string) => void;
   selectedLanguage: string;
   setSelectedLanguage: (language: string) => void;
+  editorContent: string;
+  projectTitle: string;
+  projectDescription: string;
 }
 
 export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
@@ -23,6 +26,9 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
   setSelectedColor,
   selectedLanguage,
   setSelectedLanguage,
+  editorContent,
+  projectTitle,
+  projectDescription,
 }) => {
   const [hiddenColorPick, setHiddenColorPick] = useState(false);
   const colorsList = ['#B80000', '#DB3E00', '#FCCB00', '#008B02',
@@ -55,7 +61,14 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
         </PreferencesMenuColorPick>
       </PreferencesMenuColorPickContainer>
 
-      <PreferencesMenuSaveProject type="button">
+      <PreferencesMenuSaveProject onClick={() => localStorage.setItem( String(Date.now()), JSON.stringify({
+        date: Date.now(),
+        selectedColor,
+        selectedLanguage,
+        editorContent,
+        projectTitle,
+        projectDescription,
+      }))} type="button">
         Salvar projeto
       </PreferencesMenuSaveProject>
     </>

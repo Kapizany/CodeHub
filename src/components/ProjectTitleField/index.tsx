@@ -1,7 +1,19 @@
 import { ProjectTitleFieldContainer } from "./styles";
 
-export const ProjectTitleField = () => {
+interface ProjectTitleFieldProps {
+  projectTitle: string;
+  setProjectTitle: (title:string) => void
+}
+
+export const ProjectTitleField: React.FC<ProjectTitleFieldProps> = ({
+  projectTitle,
+  setProjectTitle,
+}) => {
   return (
-    <ProjectTitleFieldContainer type="text" placeholder="Nome do seu projeto" />
+    <ProjectTitleFieldContainer
+      value={projectTitle}
+      onChange={(event) => setProjectTitle(event.target.value)}
+      type="text"
+      placeholder="Nome do seu projeto" />
   );
 };

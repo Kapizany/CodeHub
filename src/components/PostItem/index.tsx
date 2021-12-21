@@ -1,17 +1,35 @@
-import { BottomSectionContainer, CommentsAndLikesContainer, PostItemContainer, PostListCodeEditorContainer, PostListCodeEditorFieldContainer } from "./styles";
+import { BottomSectionContainer, CommentsAndLikesContainer, PostItemContainer, PostListCodeEditorContainer } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { ProfilePicture } from "../ProfilePicture";
-import { PreferencesMenuColorPickProps } from "../PreferencesMenu";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import gradientDark  from 'react-syntax-highlighter/dist/cjs/styles/hljs/gradient-dark';
 
-export const PostItem: React.FC<PreferencesMenuColorPickProps> = ({ selectedColor }) => {
+
+export interface PostItemProps {
+  selectedColor: string;
+  selectedLanguage: string;
+  editorContent: string;
+  projectTitle: string;
+  projectDescription: string;
+}
+
+export const PostItem: React.FC<PostItemProps> = ({
+  selectedColor,
+  selectedLanguage,
+  editorContent,
+  projectTitle,
+  projectDescription,
+}) => {
   return (
     <PostItemContainer>
       <PostListCodeEditorContainer selectedColor={selectedColor}>
-        <PostListCodeEditorFieldContainer disabled />
+        <SyntaxHighlighter style={gradientDark} language={selectedLanguage} >
+          {editorContent}
+        </SyntaxHighlighter>
       </PostListCodeEditorContainer>
-      <h2>Título do Projeto</h2>
-      <p>Essa é a descrição do meu projeto.</p>
+      <h2>{projectTitle}</h2>
+      <p>{projectDescription}</p>
       <BottomSectionContainer>
         <CommentsAndLikesContainer>
           <FontAwesomeIcon icon={faComment} style={{ color: "#ffffff" }} />

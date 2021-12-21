@@ -16,10 +16,11 @@ export interface CodeEditorOuterDivContainerProps {
 export interface CodeEditorProps {
   selectedColor: string;
   selectedLanguage: string;
+  editorContent: string;
+  setEditorContent:(arg:string) => void; 
 }
 
-export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLanguage}) => {
-  const [codeEditorContent, setCodeEditorContent] = useState('');
+export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLanguage, editorContent, setEditorContent}) => {
   const [highlightOn, setHighlightOn] = useState(false);
   return (
     <CodeEditorOuterDivContainer>
@@ -27,12 +28,12 @@ export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLan
         {
           highlightOn ? (
             <SyntaxHighlighter style={gradientDark} language={selectedLanguage} >
-              {codeEditorContent}
+              {editorContent}
             </SyntaxHighlighter>
           ) : (
             <CodeEditorFieldContainer
-              onChange={(event) => setCodeEditorContent(event.target.value)}
-              value={codeEditorContent}
+              onChange={(event) => setEditorContent(event.target.value)}
+              value={editorContent}
               placeholder="Entre seu código aqui."
             />
           )
