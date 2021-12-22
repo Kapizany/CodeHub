@@ -41,7 +41,7 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
 
   const communityLink = "/community-app"
   const history = useNavigate();
-  const handleClick = ( to:string) => {
+  const handleClick = (to: string) => {
     history(to);
   }
 

@@ -1,4 +1,4 @@
-// @ts-nocheck
+//@ts-nocheck
 
 import { EditorBodyOuterDiv } from "./styles";
 import { EditorBodyContainer } from "./styles";
@@ -24,7 +24,7 @@ export const EditorBody = () => {
   const [editorContent, setEditorContent] = useState(content);
   const [projectTitle, setProjectTitle] = useState(title);
   const [projectDescription, setProjectDescription] = useState(description);
-  console.log(date)
+
   return (
     <EditorBodyOuterDiv>
       <EditorBodyContainer>

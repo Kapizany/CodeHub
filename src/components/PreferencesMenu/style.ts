@@ -70,6 +70,8 @@ export const PreferencesMenuSaveProject = styled.button`
 
   background: var(--blue-light);
 
+  cursor: pointer;
+
   :focus {
     outline: none;
   }
@@ -81,5 +83,4 @@ export const PreferencesMenuSaveProject = styled.button`
   line-height: 24px;
   text-align: center;
   color: var(--background);
-  cursor: pointer;
 `;

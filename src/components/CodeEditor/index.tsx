@@ -17,10 +17,10 @@ export interface CodeEditorProps {
   selectedColor: string;
   selectedLanguage: string;
   editorContent: string;
-  setEditorContent:(arg:string) => void;
+  setEditorContent: (arg: string) => void;
 }
 
-export const CodeEditor:React.FC<CodeEditorProps> = ({
+export const CodeEditor: React.FC<CodeEditorProps> = ({
   selectedColor,
   selectedLanguage,
   editorContent,

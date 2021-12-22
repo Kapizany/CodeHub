@@ -11,9 +11,9 @@ interface ProjectConfigMenuProps {
   setSelectedLanguage: (language: string) => void;
   editorContent: string;
   projectTitle: string;
-  setProjectTitle: (title:string) => void
+  setProjectTitle: (title: string) => void
   projectDescription: string;
-  setProjectDescription: (description:string) => void;
+  setProjectDescription: (description: string) => void;
   date: string;
 }
 
