@@ -6,6 +6,7 @@ import {
   PreferencesMenuColorPick,
 } from "./style";
 import { PreferencesMenuSaveProject } from "./style";
+import { useNavigate } from "react-router-dom";
 
 export interface PreferencesMenuColorPickProps {
   selectedColor: string;
@@ -19,6 +20,7 @@ interface PreferencesMenuProps {
   editorContent: string;
   projectTitle: string;
   projectDescription: string;
+  date: string;
 }
 
 export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
@@ -29,12 +31,30 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
   editorContent,
   projectTitle,
   projectDescription,
+  date,
 }) => {
   const [hiddenColorPick, setHiddenColorPick] = useState(false);
   const colorsList = ['#B80000', '#DB3E00', '#FCCB00', '#008B02',
                       '#006B76', '#1273DE', '#004DCF', '#5300EB',
                       '#EB9694', '#f59696', '#ffed92', '#a3dbab',
                       '#7991a7', '#6BD1FF', '#000000', '#ffffff']
+
+  const communityLink = "/community-app"
+  const history = useNavigate();
+  const handleClick = ( to:string) => {
+    history(to);
+  }
+
+  function update_storage() {
+    localStorage.setItem(date ? date : String(Date.now()), JSON.stringify({
+      date: date ? date : Date.now(),
+      selectedColor,
+      selectedLanguage,
+      editorContent,
+      projectTitle,
+      projectDescription,
+  }))}
+
   return (
     <>
       <PreferencesMenuLanguage defaultValue={selectedLanguage} onChange={(event) => setSelectedLanguage(event.target.value)}>
@@ -61,14 +81,7 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
         </PreferencesMenuColorPick>
       </PreferencesMenuColorPickContainer>
 
-      <PreferencesMenuSaveProject onClick={() => localStorage.setItem( String(Date.now()), JSON.stringify({
-        date: Date.now(),
-        selectedColor,
-        selectedLanguage,
-        editorContent,
-        projectTitle,
-        projectDescription,
-      }))} type="button">
+      <PreferencesMenuSaveProject onClick={() => {update_storage(); handleClick(communityLink)}} type="button">
         Salvar projeto
       </PreferencesMenuSaveProject>
     </>

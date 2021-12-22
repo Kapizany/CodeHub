@@ -13,14 +13,14 @@ export const CommunityApp = () => {
   const [items, setItems] = useState<(PostListItemProps | null)[]>([]);
 
   function allStorage() {
-    
+
     var values = [],
       keys = Object.keys(localStorage),
       i = keys.length;
-      
+
     while ( i-- ) {
         //@ts-ignore
-        values.push( JSON.parse(localStorage.getItem(keys[i])));
+        values.push(JSON.parse(localStorage.getItem(keys[i])));
     }
 
     return values;
@@ -37,8 +37,9 @@ export const CommunityApp = () => {
       <SidebarMenu selectedPage="community" />
       <PostList>
         {items.map( item  => {
-          return item? <PostItem 
+          return item? <PostItem
                     key={item.date}
+                    id={item.date}
                     selectedLanguage={item.selectedLanguage}
                     editorContent={item.editorContent}
                     projectTitle={item.projectTitle}
