@@ -60,7 +60,7 @@ export const PreferencesMenu: React.FC<PreferencesMenuProps> = ({
       <PreferencesMenuLanguage defaultValue={selectedLanguage} onChange={(event) => setSelectedLanguage(event.target.value)}>
         <option value="javascript">Javascript</option>
         <option value="python">Python</option>
-        <option value="html">CSS</option>
+        <option value="css">CSS</option>
         <option value="html">HTML</option>
       </PreferencesMenuLanguage>
 
