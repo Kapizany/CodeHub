@@ -5,7 +5,7 @@ import { HighlightButton } from "../HighlightButton";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import gradientDark  from 'react-syntax-highlighter/dist/cjs/styles/hljs/gradient-dark';
 import { useState } from "react";
-// import React from "react";
+
 
 export interface CodeEditorOuterDivContainerProps {
   selectedColor: string;
@@ -17,10 +17,15 @@ export interface CodeEditorProps {
   selectedColor: string;
   selectedLanguage: string;
   editorContent: string;
-  setEditorContent:(arg:string) => void; 
+  setEditorContent: (arg: string) => void;
 }
 
-export const CodeEditor:React.FC<CodeEditorProps> = ({selectedColor, selectedLanguage, editorContent, setEditorContent}) => {
+export const CodeEditor: React.FC<CodeEditorProps> = ({
+  selectedColor,
+  selectedLanguage,
+  editorContent,
+  setEditorContent
+  }) => {
   const [highlightOn, setHighlightOn] = useState(false);
   return (
     <CodeEditorOuterDivContainer>

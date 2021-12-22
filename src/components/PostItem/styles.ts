@@ -47,6 +47,10 @@ export const PostListCodeEditorContainer = styled(CodeEditorContainer)`
     width: 20rem; /* 34.2rem; only works when maximized */
     height: 8rem;
   }
+
+  .cursor-pointer{
+    cursor: pointer;
+  }
 `;
 
 export const PostListCodeEditorFieldContainer = styled(

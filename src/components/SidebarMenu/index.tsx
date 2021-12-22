@@ -17,7 +17,7 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({selectedPage}) => {
   const [codeEditorLink, communityLink] = ["/code-editor-app", "/community-app"]
   const history = useNavigate();
 
-  const handleClick = ( to:string) => {
+  const handleClick = (to: string) => {
     history(to);
   }
   return (

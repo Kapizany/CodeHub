@@ -2,7 +2,7 @@ import { ProjectDescriptionFieldContainer } from "./styles";
 
 interface ProjectDescriptionFieldProps {
   projectDescription: string;
-  setProjectDescription: (description:string) => void;
+  setProjectDescription: (description: string) => void;
 }
 
 export const ProjectDescriptionField: React.FC<ProjectDescriptionFieldProps> = ({

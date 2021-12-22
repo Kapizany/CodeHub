@@ -2,7 +2,7 @@ import { ProjectConfigMenuContainer } from "./styles";
 import { ProjectTitleField } from "../ProjectTitleField";
 import { ProjectDescriptionField } from "../ProjectDescriptionField";
 import { PreferencesMenu } from "../PreferencesMenu";
-import { useState } from "react";
+
 
 interface ProjectConfigMenuProps {
   selectedColor: string;
@@ -10,6 +10,11 @@ interface ProjectConfigMenuProps {
   selectedLanguage: string;
   setSelectedLanguage: (language: string) => void;
   editorContent: string;
+  projectTitle: string;
+  setProjectTitle: (title: string) => void
+  projectDescription: string;
+  setProjectDescription: (description: string) => void;
+  date: string;
 }
 
 export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
@@ -18,9 +23,12 @@ export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
   selectedLanguage,
   setSelectedLanguage,
   editorContent,
+  projectTitle,
+  setProjectTitle,
+  projectDescription,
+  setProjectDescription,
+  date,
 }) => {
-  const [projectTitle, setProjectTitle] = useState("");
-  const [projectDescription, setProjectDescription] = useState("");
   return (
     <ProjectConfigMenuContainer>
       <h2>Seu projeto</h2>
@@ -39,6 +47,7 @@ export const ProjectConfigMenu: React.FC<ProjectConfigMenuProps> = ({
         editorContent={editorContent}
         projectTitle={projectTitle}
         projectDescription={projectDescription}
+        date={date}
       />
     </ProjectConfigMenuContainer>
   );

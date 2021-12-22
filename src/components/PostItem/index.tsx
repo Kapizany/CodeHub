@@ -4,6 +4,7 @@ import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { ProfilePicture } from "../ProfilePicture";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import gradientDark  from 'react-syntax-highlighter/dist/cjs/styles/hljs/gradient-dark';
+import { useNavigate } from "react-router-dom";
 
 
 export interface PostItemProps {
@@ -12,6 +13,7 @@ export interface PostItemProps {
   editorContent: string;
   projectTitle: string;
   projectDescription: string;
+  id: string;
 }
 
 export const PostItem: React.FC<PostItemProps> = ({
@@ -20,11 +22,20 @@ export const PostItem: React.FC<PostItemProps> = ({
   editorContent,
   projectTitle,
   projectDescription,
+  id,
 }) => {
+  const codeEditorLink = "/code-editor-app?id=" + id;
+
+  const history = useNavigate();
+
+  const handleClick = ( to:string) => {
+    history(to);
+  };
+
   return (
     <PostItemContainer>
       <PostListCodeEditorContainer selectedColor={selectedColor}>
-        <SyntaxHighlighter style={gradientDark} language={selectedLanguage} >
+        <SyntaxHighlighter className="cursor-pointer" onClick={() => handleClick(codeEditorLink)} style={gradientDark} language={selectedLanguage} >
           {editorContent}
         </SyntaxHighlighter>
       </PostListCodeEditorContainer>

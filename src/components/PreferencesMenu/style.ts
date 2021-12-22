@@ -18,6 +18,7 @@ export const PreferencesMenuLanguage = styled.select`
   ::placeholder {
     color: var(--text-input);
   }
+  cursor: pointer;
 
   :focus {
     outline: none;
@@ -54,6 +55,8 @@ export const PreferencesMenuColorPick = styled.div<PreferencesMenuColorPickProps
     top: 48px;
     right: 0px; /* -17% previously */
   }
+
+  cursor: pointer;
 `;
 
 export const PreferencesMenuSaveProject = styled.button`
@@ -67,9 +70,11 @@ export const PreferencesMenuSaveProject = styled.button`
 
   background: var(--blue-light);
 
-  /* :focus {
+  cursor: pointer;
+
+  :focus {
     outline: none;
-  } */
+  }
 
   font-family: Inter;
   font-style: normal;
@@ -78,5 +83,4 @@ export const PreferencesMenuSaveProject = styled.button`
   line-height: 24px;
   text-align: center;
   color: var(--background);
-  cursor: pointer;
 `;

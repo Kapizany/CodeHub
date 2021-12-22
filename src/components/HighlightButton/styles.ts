@@ -11,9 +11,11 @@ export const HighlightButtonContainer = styled.button`
 
   background: var(--blue);
 
-  /* :focus {
+  cursor: pointer;
+
+  :focus {
     outline: none;
-  } */
+  }
 
   font-family: Inter;
   font-style: normal;
